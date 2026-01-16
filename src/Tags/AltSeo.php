@@ -55,9 +55,13 @@ class AltSeo extends Tags
         $metaRobots = [];
         if ($this->context->value('alt_seo_noindex')) {
             $metaRobots[] = 'noindex';
+        } else {
+            $metaRobots[] = 'index';
         }
         if ($this->context->value('alt_seo_nofollow')) {
             $metaRobots[] = 'nofollow';
+        } else {
+            $metaRobots[] = 'follow';
         }
 
         return [
