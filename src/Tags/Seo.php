@@ -16,7 +16,7 @@ use Statamic\View\Antlers\AntlersString;
  * @license  Copyright (C) Alt Design Limited - All Rights Reserved - licensed under the MIT license
  * @link     https://alt-design.net
  */
-class AltSeo extends Tags
+class Seo extends Tags
 {
     /**
      * The {{ alt_seo }} tag.

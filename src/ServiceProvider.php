@@ -31,7 +31,7 @@ class ServiceProvider extends AddonServiceProvider
      * @var string[] - Bring in the tags for use
      */
     protected $tags = [
-        \AllYouNeed\Seo\Tags\AltSeo::class,
+        \AllYouNeed\Seo\Tags\Seo::class,
     ];
 
     /**
