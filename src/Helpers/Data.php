@@ -1,4 +1,6 @@
-<?php namespace AltDesign\AltSeo\Helpers;
+<?php
+
+namespace AllYouNeed\Seo\Helpers;
 
 use Statamic\Fields\BlueprintRepository;
 

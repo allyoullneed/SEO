@@ -1,11 +1,11 @@
 <?php
 
-namespace AltDesign\AltSeo\Tags;
+namespace AllYouNeed\Seo\Tags;
 
 use Statamic\Facades\Antlers;
 use Statamic\Tags\Tags;
 
-use AltDesign\AltSeo\Helpers\Data;
+use AllYouNeed\Seo\Helpers\Data;
 use Statamic\View\Antlers\AntlersString;
 
 /**

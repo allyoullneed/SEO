@@ -1,10 +1,12 @@
-<?php namespace AltDesign\AltSeo\Events;
+<?php
+
+namespace AllYouNeed\Seo\Events;
 
 use Illuminate\Support\Str;
 use Statamic\Events;
 use Statamic\Facades\Blink;
 use Statamic\Fields\BlueprintRepository;
-use AltDesign\AltSeo\Helpers\Data;
+use AllYouNeed\Seo\Helpers\Data;
 
 /**
  * Class Seo

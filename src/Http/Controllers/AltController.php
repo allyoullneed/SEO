@@ -1,7 +1,9 @@
-<?php namespace AltDesign\AltSeo\Http\Controllers;
+<?php
+
+namespace AllYouNeed\Seo\Http\Controllers;
 
 use Illuminate\Http\Request;
-use AltDesign\AltSeo\Helpers\Data;
+use AllYouNeed\Seo\Helpers\Data;
 use Statamic\Facades\AssetContainer;
 
 /**

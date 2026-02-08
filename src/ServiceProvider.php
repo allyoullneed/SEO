@@ -1,8 +1,8 @@
 <?php
 
-namespace AltDesign\AltSeo;
+namespace AllYouNeed\Seo;
 
-use AltDesign\AltSeo\Events\Seo;
+use AllYouNeed\Seo\Events\Seo;
 
 // Facades
 use Illuminate\Support\Facades\Event;
@@ -31,7 +31,7 @@ class ServiceProvider extends AddonServiceProvider
      * @var string[] - Bring in the tags for use
      */
     protected $tags = [
-        \AltDesign\AltSeo\Tags\AltSeo::class,
+        \AllYouNeed\Seo\Tags\AltSeo::class,
     ];
 
     /**
