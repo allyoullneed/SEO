@@ -1,10 +1,10 @@
 {
-    "name": "alt-design/alt-seo",
-    "description": "Alt SEO addon, add SEO tags to your site",
-    "license": "MIT",
+    "name": "allyouneed/seo",
+    "description": "SEO tags to your Statamic website",
+    "license": "proprietary",
     "autoload": {
         "psr-4": {
-            "AltDesign\\AltSeo\\": "src"
+            "AllYouNeed\\Seo\\": "src"
         }
     },
     "require": {
@@ -18,7 +18,7 @@
         },
         "laravel": {
             "providers": [
-                "AltDesign\\AltSeo\\ServiceProvider"
+                "AllYouNeed\\Seo\\ServiceProvider"
             ]
         }
     },
