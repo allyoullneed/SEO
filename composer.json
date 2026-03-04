@@ -8,17 +8,17 @@
         }
     },
     "require": {
-        "php": "^8.1",
-        "statamic/cms": "^4.0|^5.0|^6.0"
+        "php": "^8.3",
+        "statamic/cms": "^6.0"
     },
     "extra": {
         "statamic": {
-            "name": "Alt Seo",
-            "description": "Alt Seo addon"
+            "name": "All Seo you need",
+            "description": "Seo Addon"
         },
         "laravel": {
             "providers": [
-                "AllYouNeed\\Seo\\ServiceProvider"
+                "AllYouNeed\\Seo\\SeoServiceProvider"
             ]
         }
     },

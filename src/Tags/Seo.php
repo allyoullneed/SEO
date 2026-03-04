@@ -19,7 +19,7 @@ use Statamic\View\Antlers\AntlersString;
 class Seo extends Tags
 {
     /**
-     * The {{ alt_seo }} tag.
+     * The {{ seo }} tag.
      *
      * @return string|array
      */
@@ -30,7 +30,7 @@ class Seo extends Tags
     }
 
     /**
-     * The {{ alt_seo:title }} tag.
+     * The {{ seo:title }} tag.
      *
      * @return string
      */
@@ -40,25 +40,25 @@ class Seo extends Tags
     }
 
     /**
-     * The {{ alt_seo:meta }} tag.
+     * The {{ seo:meta }} tag.
      *
      * @return string|array
      */
     public function meta()
     {
-        return view('alt-seo::meta', $this->meta_array())->render();
+        return view('seo::meta', $this->meta_array())->render();
     }
 
     // Supporting function for the meta() function view
     private function meta_array()
     {
         $metaRobots = [];
-        if ($this->context->value('alt_seo_noindex')) {
+        if ($this->context->value('seo_noindex')) {
             $metaRobots[] = 'noindex';
         } else {
             $metaRobots[] = 'index';
         }
-        if ($this->context->value('alt_seo_nofollow')) {
+        if ($this->context->value('seo_nofollow')) {
             $metaRobots[] = 'nofollow';
         } else {
             $metaRobots[] = 'follow';
@@ -232,7 +232,7 @@ class Seo extends Tags
 
     public function schema()
     {
-        if (!config('alt-seo.alt_seo_enable_schema')) {
+        if (!config('seo.alt_seo_enable_schema')) {
             return '<script>console.error("The schema tag is not enabled.")</script>';
         }
 

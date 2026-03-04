@@ -50,7 +50,7 @@ class Data
         $this->manager = new Manager();
 
         // Grab the current file we're working with
-        $this->currentFile = $this->manager->disk()->get('content/alt-seo/' . $this->type . '.yaml');
+        $this->currentFile = $this->manager->disk()->get('content/seo/' . $this->type . '.yaml');
 
         $this->data = Yaml::parse($this->currentFile);
     }

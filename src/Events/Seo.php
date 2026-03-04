@@ -24,7 +24,7 @@ class Seo
      * @var string[]
      */
     protected $events = [
-        Events\EntryBlueprintFound::class => 'addSeoData',
+        Events\BlueprintCreating::class => 'addSeoData',
         Events\TermBlueprintFound::class => 'addSeoData',
     ];
 
@@ -36,7 +36,7 @@ class Seo
      */
     public function subscribe($events)
     {
-        $events->listen(Events\EntryBlueprintFound::class, self::class.'@'.'addSeoData');
+        $events->listen(Events\BlueprintCreating::class, self::class.'@'.'addSeoData');
         $events->listen(Events\TermBlueprintFound::class, self::class.'@'.'addSeoData');
     }
 
@@ -61,7 +61,7 @@ class Seo
         }
 
         // Grab the tabs - there may be a better way of doing this?
-        $blueprint = with(new BlueprintRepository)->setDirectory(__DIR__ . '/../../resources/blueprints')->find(config('alt-seo.alt_seo_enable_schema') ? 'seo-with-schema' : 'seo');
+        $blueprint = with(new BlueprintRepository)->setDirectory(__DIR__ . '/../../resources/blueprints')->find(config('seo.alt_seo_enable_schema') ? 'seo-with-schema' : 'seo');
         $blueprintReady = $event->blueprint->contents();
 
         //Global override

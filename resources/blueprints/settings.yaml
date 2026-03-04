@@ -3,10 +3,10 @@ sections:
     display: General
     fields:
       -
-        handle: alt_seo_options_default
+        handle: seo_options_default
         field:
           type: section
-          display: 'Alt SEO'
+          display: 'SEO'
           icon: section
           instructions: 'You can use the following variables: {title}, {site_name}, {description}, or any antlers variable from on page'
           listable: hidden
@@ -15,28 +15,28 @@ sections:
           replicator_preview: true
           hide_display: false
       -
-        handle: alt_seo_meta_title_default
+        handle: seo_meta_title_default
         field:
           display: "SEO Title"
           type: text
           character_limit: 100
           instructions: "For an SEO-optimized page title in Google, the magic number typically hovers around 50-60 characters. While Google may stretch to show up to 70 characters, keeping your titles within that 50-60 range ensures they stay sleek and fully visible in the search results."
       -
-        handle: alt_seo_meta_description_default
+        handle: seo_meta_description_default
         field:
           display: "SEO Descriptions"
           type: textarea
           character_limit: 200
           instructions: "The optimal length for an SEO-friendly meta description in Google is typically around 150-160 characters. Google may display up to 160 characters, but it's a good practice to keep your meta descriptions within this range to ensure they provide a concise and informative snippet in the search results."
       -
-        handle: alt_seo_asset_container
+        handle: seo_asset_container
         field:
           display: "Asset Container"
           type: text
           character_limit: 200
           instructions: "To use an asset container with a different handle to select images from in your pages, enter your asset container handle here"
       -
-            handle: alt_seo_collection_asset_containers
+            handle: seo_collection_asset_containers
             field:
               collapse: false
               previews: true
@@ -90,7 +90,7 @@ sections:
     display: Social
     fields:
       -
-        handle: alt_social_options_default
+        handle: social_options_default
         field:
           type: section
           display: 'Social Options'
@@ -101,19 +101,19 @@ sections:
           visibility: visible
           replicator_preview: true
           hide_display: false
-      - handle: alt_seo_social_title_default
+      - handle: seo_social_title_default
         field:
           display: "Social Title"
           type: text
           character_limit: 100
           instructions: "When crafting titles for social media sharing, keep them short and snappy, ideally within the 60-character range. Concise titles tend to perform better on social platforms by capturing attention and encouraging clicks and shares."
-      - handle: alt_seo_social_description_default
+      - handle: seo_social_description_default
         field:
           display: "Social Descriptions"
           type: textarea
           character_limit: 200
           instructions: "Keep social media sharing descriptions super concise, typically around 100 characters. Shorter descriptions tend to be more shareable and effective in grabbing attention."
-      - handle: alt_seo_social_image_default
+      - handle: seo_social_image_default
         field:
           mode: list
           container: assets

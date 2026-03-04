@@ -7,14 +7,28 @@ use AllYouNeed\Seo\Helpers\Data;
 use Statamic\Facades\AssetContainer;
 
 /**
- * Class AltController
+ * Class SeoController
  *
  * @package  AltDesign\AltSeo
  * @author   Ben Harvey <ben@alt-design.net>, Natalie Higgins <natalie@alt-design.net>
  * @license  Copyright (C) Alt Design Limited - All Rights Reserved - licensed under the MIT license
  * @link     https://alt-design.net
  */
-class AltController {
+class SeoController {
+
+    public function values(): array
+    {
+        return [
+            'name' => $this->name,
+            'description' => $this->description,
+        ];       
+    }
+
+    public function blueprint()
+    {
+        return Blueprint::make(...);
+    }
+
 
     /**
      *  Render the default options page.
@@ -28,8 +42,8 @@ class AltController {
 
         // Check if the asset container exists
         $contents = $blueprint->contents();
-        $containerName = $fields->get('alt_seo_asset_container')->value() ?? 'assets';
-        $socialDefaultKey = 'alt_seo_social_image_default';
+        $containerName = $fields->get('seo_asset_container')->value() ?? 'assets';
+        $socialDefaultKey = 'seo_social_image_default';
         $theFields = $contents['tabs']['social']['sections'][0]['fields'];
 
         if(!AssetContainer::find($containerName)) {
@@ -49,7 +63,7 @@ class AltController {
 
         $blueprint->setContents($contents);
 
-        return view('alt-seo::index', [
+        return view('seo::index', [
             'blueprint' => $blueprint->toPublishArray(),
             'values'    => $fields->values(),
             'meta'      => $fields->meta(),
